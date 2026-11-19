@@ -1,0 +1,40 @@
+---
+title: "Bears"
+author: "Your Name Here"
+date: "Spring 2026"
+output: html_document
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## make a simple regression model
+
+```{r}
+bears <- read.csv(file="BEARS.csv",header = TRUE)
+#adjust factors to be factors
+bears$SEX<- as.factor(bears$SEX)
+bears$MONTH<- as.factor(bears$MONTH)
+```
+
+## Model LENGTH ~ NECK  this is an example  
+
+
+Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+
+## Model LENGTH ~ HEADLEN
+
+
+
+## Model LENGTH ~ HeadWTH
+
+
+
+## Model LENGTH ~ CHEST
+
+
+
+## Model LENGTH ~ WEIGHT
+
+
