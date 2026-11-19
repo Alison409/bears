@@ -21,7 +21,8 @@ bears$MONTH<- as.factor(bears$MONTH)
 ## Model LENGTH ~ NECK  this is an example  
 
 
-Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+Compare all models that predict LENGTH other than NECK.  
+Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
 ## Model LENGTH ~ HEADLEN
 
