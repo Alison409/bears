@@ -33,11 +33,22 @@ model.1 <- lm(LENGTH~NECK,data=bears)
 summary.lm(model.1)
 ```
 
- 
+ The adjusted R-squared is 0.7476.  
 
 ## Model LENGTH ~ HEADLEN
 
+```{r}
+plot(LENGTH ~ HEADLEN,data=bears)
+```
 
+As the head length increases, the length of the bear also increases. 
+
+```{r}
+model.1 <- lm(LENGTH ~ HEADLEN,data=bears)
+summary.lm(model.1)
+```
+
+The adjusted R-squared is 0.8463, bigger than the previous models.
 
 ## Model LENGTH ~ HeadWTH
 
