@@ -52,12 +52,46 @@ The adjusted R-squared is 0.8463, bigger than the previous models.
 
 ## Model LENGTH ~ HeadWTH
 
+```{r}
+plot(LENGTH ~ HEADWTH,data=bears)
+```
 
+As the head width increases, the length steadily increases as it goes right. 
+
+```{r}
+model.1 <- lm(LENGTH ~ HEADWTH,data=bears)
+summary.lm(model.1)
+```
+
+The adjusted R-squared is 0.5409, smaller than the previous models.  
 
 ## Model LENGTH ~ CHEST
 
+```{r}
+plot(LENGTH ~ CHEST,data=bears)
+```
 
+As the chest length increases, the length also increases.  
+
+
+```{r}
+model.1 <- lm(LENGTH ~ CHEST,data=bears)
+summary.lm(model.1)
+```
+
+The adjusted R-squared is 0.791, bigger than the previous model.
 
 ## Model LENGTH ~ WEIGHT
 
+```{r}
+plot(LENGTH ~ WEIGHT,data=bears)
+```
 
+As the height increases, the length also increases overall. 
+
+```{r}
+model.1 <- lm(LENGTH ~ WEIGHT,data=bears)
+summary.lm(model.1)
+```
+
+The adjusted R-squared is 0.7472, smaller than the previous model.
