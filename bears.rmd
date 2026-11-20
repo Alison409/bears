@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## make a simple regression model
+## Make a simple regression model
 
 ```{r}
 bears <- read.csv(file="BEARS.csv",header = TRUE)
@@ -20,9 +20,20 @@ bears$MONTH<- as.factor(bears$MONTH)
 
 ## Model LENGTH ~ NECK  this is an example  
 
+```{r}
+plot(LENGTH ~ NECK,data=bears)
+```
 
-Compare all models that predict LENGTH other than NECK.  
-Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+
+As neck diameter increases Length tends to also increase. The plot is primarily linear. 
+
+
+```{r}
+model.1 <- lm(LENGTH~NECK,data=bears)
+summary.lm(model.1)
+```
+
+ 
 
 ## Model LENGTH ~ HEADLEN
 
